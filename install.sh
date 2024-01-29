@@ -56,7 +56,7 @@ curl -sS https://starship.rs/install.sh | sh
 rm -rf .config/zsh
 
 # move the cloned zsh config files to .config
-mv ./dotfiles/.config/zsh ~/.config/
+mv ./.config/zsh ~/.config/
 
 # system link .zshrc file to home dir
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
