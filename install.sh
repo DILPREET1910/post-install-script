@@ -33,6 +33,11 @@ CLONED_DIR=$(pwd .)
 git clone https://github.com/dilpreet1910/dotfiles
 
 ##########################################################
+# starship
+##########################################################
+curl -sS https://starship.rs/install.sh | sh
+
+##########################################################
 # ZSH
 ##########################################################
 # remove if .config/zsh already exists
