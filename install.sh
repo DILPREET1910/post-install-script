@@ -48,3 +48,7 @@ mv ./dotfiles/.config/zsh ~/.config/
 
 # system link .zshrc file to home dir
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
+
+# zsh history
+mkdir ~/.cache/zsh
+touch ~/.cache/zsh/history
