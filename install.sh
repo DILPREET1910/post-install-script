@@ -31,6 +31,18 @@ fi
 ##########################################################
 CLONED_DIR=$(pwd .)
 git clone https://github.com/dilpreet1910/dotfiles
+cd dotfiles || exit
+
+
+##########################################################
+# yay installer for arch
+##########################################################
+if [ "$DISTRO" = "arch" ]
+then 
+    git clone https://aur.archlinux.org/yay.git
+    mv yay /usr/bin/
+    chown -R "$USER" /usr/bin/yay
+fi
 
 ##########################################################
 # starship
