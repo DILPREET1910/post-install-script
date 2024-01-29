@@ -64,3 +64,12 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 # zsh history
 mkdir ~/.cache/zsh
 touch ~/.cache/zsh/history
+
+# install autojump
+if [ "$DISTRO" = "debian" ]
+then 
+    eval "$INSTALLER autojump"
+elif [ "$DISTRO" = "arch" ]
+    then
+        yay install autojump
+fi
