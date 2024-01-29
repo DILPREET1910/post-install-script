@@ -52,6 +52,8 @@ curl -sS https://starship.rs/install.sh | sh
 ##########################################################
 # ZSH
 ##########################################################
+eval "$INSTALLER zsh"
+
 # remove if .config/zsh already exists
 rm -rf .config/zsh
 
