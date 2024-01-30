@@ -55,7 +55,7 @@ curl -sS https://starship.rs/install.sh | sh
 eval "$INSTALLER zsh"
 
 # remove if .config/zsh already exists
-rm -rf .config/zsh
+rm -rf ~/.config/zsh
 
 # move the cloned zsh config files to .config
 mv ./.config/zsh ~/.config/
