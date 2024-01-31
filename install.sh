@@ -92,7 +92,7 @@ then
     eval "$INSTALLER neovim"
 elif [ "$DISTRO" = "debian" ]
 then 
-    snap install neovim --classic
+    snap install nvim --classic
 fi
 
 # install packer
