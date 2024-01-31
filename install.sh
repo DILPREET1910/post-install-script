@@ -3,8 +3,8 @@
 ##########################################################
 # check if root
 ##########################################################
-if [ "$EUID" -ne 0 ]
-then echo "Please runt as root"
+if [ "$EUID" = 0 ]
+then echo "Please do not run as root"
     exit
 fi
 
@@ -21,9 +21,9 @@ fi
 # set installer
 ##########################################################
 if [ "$DISTRO" = "arch" ]
-     then INSTALLER="pacman -S "
+     then INSTALLER="sudo pacman -S "
 elif [ "$DISTRO" = "debian" ]
-    then INSTALLER="apt-get install "
+    then INSTALLER="sudo apt-get install "
 fi
 
 ##########################################################
@@ -40,8 +40,8 @@ cd dotfiles || exit
 if [ "$DISTRO" = "arch" ]
 then 
     git clone https://aur.archlinux.org/yay.git
-    mv yay /usr/bin/
-    chown -R "$USER" /usr/bin/yay
+    sudo mv yay /usr/bin/
+    sudo chown -R "$USER" /usr/bin/yay
 fi
 
 ##########################################################
@@ -92,7 +92,7 @@ then
     eval "$INSTALLER neovim"
 elif [ "$DISTRO" = "debian" ]
 then 
-    snap install nvim --classic
+    sudo snap install nvim --classic
 fi
 
 # install packer
