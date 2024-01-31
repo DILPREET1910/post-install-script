@@ -99,5 +99,8 @@ fi
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
+# remove if .config/nvim already exists
+rm -rf ~/.config/nvim
+
 # move the cloned nvim config files to .confg
 mv ./.config/nvim ~/.config/
