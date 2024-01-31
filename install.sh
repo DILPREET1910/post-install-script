@@ -83,3 +83,14 @@ elif [ "$DISTRO" = "arch" ]
     then
         yay install autojump
 fi
+
+##########################################################
+# NeoVim
+##########################################################
+if [ "$DISTRO" = "arch" ]
+then
+    eval "$INSTALLER neovim"
+elif [ "$DISTRO" = "debian" ]
+then 
+    snap install neovim --classic
+fi
