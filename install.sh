@@ -104,3 +104,6 @@ rm -rf ~/.config/nvim
 
 # move the cloned nvim config files to .confg
 mv ./.config/nvim ~/.config/
+
+# source packer
+nvim -c ":luafile ~/.config/nvim/dilpreet/packer.lua" -c ":PackerSync" -c ":qall"
